@@ -139,6 +139,13 @@ These updates improve analytical rigor and reproducibility while keeping the sco
 
 ## 7. References and Artifacts
 - **NOAA Climate Division Data (nClimDiv):** [https://www.ncei.noaa.gov/pub/data/cirs/climdiv/](https://www.ncei.noaa.gov/pub/data/cirs/climdiv/)  
-- **EIA Electricity Data Browser (API):** [https://www.eia.gov/electricity/data/browser/](https://www.eia.gov/electricity/data/browser/)  
-- **Repository structure:**  
+- **EIA Electricity Data Browser (API):** [https://www.eia.gov/electricity/data/browser/](https://www.eia.gov/electricity/data/browser/)
+  
+---
+
+## 8. Ethical and Reproducibility Notes
+All datasets used are **aggregated, public, and anonymized**. Both NOAA and EIA are official U.S. government agencies providing open-access data. No individual or private information is involved.  
+Our repository is structured to support reproducibility, so anyone can re-run the notebook and obtain the same cleaned datasets and results.
+
+---
 
