@@ -83,15 +83,23 @@ Our focus during this phase was to automate data acquisition, perform thorough c
 
 ---
 
-## 3. Updated Timeline
+## 3. Updated Timeline (as of November 13, 2025)
 
 | Week | Date Range | Task | Deliverable | Status |
 |------|-------------|------|--------------|---------|
-| **1** | Oct 7 – Oct 11 | Acquire NOAA & EIA datasets | Raw CSV/API data | Completed |
+| **1** | Oct 7 – Oct 11 | Acquire NOAA & EIA datasets | Raw CSV/API data |  Completed |
 | **2** | Oct 12 – Oct 18 | Data cleaning & transformation | Cleaned data files | Completed |
-| **3** | Oct 19 – Oct 25 | Integration & exploratory visualization | Merged dataset, plots | In progress |
-| **4** | Oct 26 – Nov 1 | Regression modeling & diagnostics | Analytical results | Planned |
-| **5** | Nov 2 – Nov 11 | Final pipeline, report writing, release | GitHub release | Planned |
+| **3** | Oct 19 – Oct 25 | Integration & exploratory visualization | Merged dataset, plots | Completed |
+| **4** | Oct 26 – Nov 8 | Regression modeling & elasticity analysis | Analytical results, model notebook | Completed |
+| **5** | Nov 9 – Dec 1 | Final visualization and report writing | Figures, README draft | Ongoing |
+| **6** | Dec 2 – Dec 10 | Final integration and release tag | GitHub release (`final-project`) + Box data upload |  Planned |
+
+### Notes
+- Weeks 1–3 have been fully completed, with all datasets acquired, cleaned, and partially visualized.  
+- Week 4 focuses on regression analysis to estimate temperature elasticity.  
+- Week 5 is dedicated to generating final plots, drafting the final report, and verifying reproducibility.  
+- Week 6 will finalize integration, tag the `final-project` release, and prepare for submission on **December 10**.
+
 
 ---
 
