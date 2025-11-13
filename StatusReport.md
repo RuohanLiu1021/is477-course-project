@@ -1,8 +1,9 @@
 # Interim Status Report – Temperature and Electricity Consumption in the U.S.
 
 ## 1. Introduction
-This status report summarizes the progress we have made since submitting our **Project Plan** for *Temperature and Electricity Consumption in the U.S.* Over the past few weeks, our team successfully acquired and processed two major public datasets — NOAA climate data and EIA electricity sales data — built reproducible data pipelines, and generated cleaned, merged outputs ready for analysis.  
-Our focus during this phase was to automate data acquisition, perform thorough cleaning and standardization, and ensure reproducibility through version control and documentation. This report provides an update on completed tasks, outlines the updated project timeline, documents any changes made to the initial plan, and summarizes each team member’s specific contributions.
+This status report summarizes the progress we’ve made since submitting our **Project Plan** for *Temperature and Electricity Consumption in the U.S.* Over the past few weeks, we successfully acquired and processed two major datasets — NOAA climate data and EIA electricity sales data. We built reproducible data pipelines and generated cleaned, ready-to-analyze outputs.  
+
+During this milestone, our main focus was on automating data acquisition, cleaning, and standardizing the datasets while ensuring full reproducibility through GitHub documentation. This report provides an update on our progress, describes changes to the project plan, and outlines each team member’s specific contributions.
 
 ---
 
@@ -30,7 +31,7 @@ Our focus during this phase was to automate data acquisition, perform thorough c
 ### **Task 2 – Data Cleaning and Transformation**
 **Goal:** Convert raw datasets into standardized, analysis-ready tables.  
 **Progress:**  
-- NOAA data was read using fixed-width column specifications, reshaped from wide to long format (one row per state–year–month).  
+- NOAA data was read using fixed-width column specifications and reshaped from wide to long format (one row per state–year–month).  
 - Variables were renamed for clarity and converted to numeric types; missing values were handled consistently.  
 - CDD, HDD, and TAVG data were merged into a single dataset: `climate_statewide_clean.csv`.  
 - EIA data cleaning steps included extracting year and month from `period`, renaming columns, and removing unnecessary metadata fields (`units`, `sectorid`, etc.).  
@@ -49,25 +50,25 @@ Our focus during this phase was to automate data acquisition, perform thorough c
 ### **Task 3 – Data Integration**
 **Goal:** Merge climate and electricity datasets by state, year, and month.  
 **Progress:**  
-- Integration is currently in progress. The cleaned datasets share common keys (`state_name`, `year`, `month`), ensuring consistent alignment.  
+- Integration is nearly complete. The cleaned datasets share common keys (`state_name`, `year`, `month`), ensuring consistent alignment.  
 - Planned integration approach:  
   - Join NOAA climate and EIA electricity data using Pandas merge.  
   - Compute derived variables such as per-customer electricity usage and normalized demand elasticity.  
   - Validate merged dataset for missing or misaligned rows.  
 - Expected output: `merged_energy_climate.csv`.  
 
-**Status:**  *In progress (to be finalized by next milestone).*
+**Status:**  *In progress — validation scheduled for mid-November.*
 
 ---
 
 ### **Task 4 – Exploratory Data Analysis (EDA)**
 **Goal:** Investigate preliminary trends between temperature and energy use.  
 **Progress:**  
-- Early visualizations show strong **positive correlation between Cooling Degree Days (CDD)** and electricity sales during summer months.  
-- Negative or weak correlation observed for Heating Degree Days (HDD) in warmer states.  
-- Planned next steps: regression analysis and seasonal comparison by region.  
+- Early visualizations show a strong **positive correlation between Cooling Degree Days (CDD)** and electricity sales during summer months.  
+- A negative or weak correlation was observed for Heating Degree Days (HDD) in warmer states.  
+- Planned next steps include regression modeling and seasonal comparison by region.  
 
-**Status:**  *Initial plots generated; statistical modeling scheduled for Week 4–5.*
+**Status:**  *Initial visualizations completed; regression and elasticity estimation scheduled for late November.*
 
 ---
 
@@ -79,27 +80,26 @@ Our focus during this phase was to automate data acquisition, perform thorough c
 - Each dataset and script includes descriptive markdown summaries.  
 - Version control managed via GitHub; commits are properly labeled and tagged.  
 
-**Status:** *Completed and ongoing maintenance.*
+**Status:** *Completed and under continuous maintenance.*
 
 ---
 
 ## 3. Updated Timeline (as of November 13, 2025)
 
 | Week | Date Range | Task | Deliverable | Status |
-|------|-------------|------|--------------|---------|
-| **1** | Oct 7 – Oct 11 | Acquire NOAA & EIA datasets | Raw CSV/API data |  Completed |
+|------|-------------|------|--------------|------------------------|
+| **1** | Oct 7 – Oct 11 | Acquire NOAA & EIA datasets | Raw CSV/API data | Completed |
 | **2** | Oct 12 – Oct 18 | Data cleaning & transformation | Cleaned data files | Completed |
-| **3** | Oct 19 – Oct 25 | Integration & exploratory visualization | Merged dataset, plots | Completed |
-| **4** | Oct 26 – Nov 8 | Regression modeling & elasticity analysis | Analytical results, model notebook | Completed |
-| **5** | Nov 9 – Dec 1 | Final visualization and report writing | Figures, README draft | Ongoing |
-| **6** | Dec 2 – Dec 10 | Final integration and release tag | GitHub release (`final-project`) + Box data upload |  Planned |
+| **3** | Oct 19 – Oct 31 | Integration of datasets | Merged dataset (`merged_energy_climate.csv`) | Nearly done |
+| **4** | Nov 1 – Nov 20 | Regression & elasticity analysis | Analytical notebook | In progress |
+| **5** | Nov 21 – Dec 5 | Visualization & final writing | Figures, README draft | Planned |
+| **6** | Dec 6 – Dec 10 | Final integration and release | GitHub `final-project` tag + Box upload | Planned |
 
-### Notes
-- Weeks 1–3 have been fully completed, with all datasets acquired, cleaned, and partially visualized.  
+**Notes:**  
+- Weeks 1–3 have been fully completed with all datasets acquired, cleaned, and merged.  
 - Week 4 focuses on regression analysis to estimate temperature elasticity.  
 - Week 5 is dedicated to generating final plots, drafting the final report, and verifying reproducibility.  
 - Week 6 will finalize integration, tag the `final-project` release, and prepare for submission on **December 10**.
-
 
 ---
 
@@ -126,22 +126,22 @@ These updates improve analytical rigor and reproducibility while keeping the sco
 - Developed cleaning functions for fixed-width files and reshaped them into long format.  
 - Integrated variable mappings for state names and abbreviations.  
 - Designed the first draft of exploratory correlation plots between CDD/HDD and sales.  
-- Contributed to the documentation and helped structure `01_data_acquire_processing.ipynb`.
+- Contributed to documentation and supported the notebook structure `01_data_acquire_processing.ipynb`.
 
 ### **Yu Wan – Analyst**
 - Focused on the **EIA dataset**, including connecting to the API, downloading state-level data, and cleaning monthly records.  
-- Renamed and standardized column names, created the clean final EIA CSV, and verified consistency across time periods.  
-- Organized the GitHub repository structure and wrote documentation for the acquisition and cleaning workflow.  
-- Drafted this **Status Report** and ensured all files were properly committed and tagged.
+- Standardized variable names, created the cleaned EIA CSV, and checked data consistency across states and months.  
+- Structured the GitHub repository and wrote documentation describing the acquisition and cleaning workflow.  
+- Drafted this **Status Report** and verified that all files were properly committed and tagged.
 
 ---
 
 ## 6. Next Steps
 - Complete dataset integration (`merged_energy_climate.csv`).  
-- Conduct correlation and regression analyses to estimate temperature elasticity.  
+- Conduct regression and elasticity analysis to estimate temperature sensitivity.  
 - Build regional visualizations comparing southern vs. northern states.  
 - Prepare final deliverables: reproducible notebook, merged data, and final report.  
-- Tag final release as `final-project` by December 10 (Week 5).
+- Tag final release as `final-project` by **December 10, 2025**.
 
 ---
 
@@ -153,7 +153,10 @@ These updates improve analytical rigor and reproducibility while keeping the sco
 
 ## 8. Ethical and Reproducibility Notes
 All datasets used are **aggregated, public, and anonymized**. Both NOAA and EIA are official U.S. government agencies providing open-access data. No individual or private information is involved.  
-Our repository is structured to support reproducibility, so anyone can re-run the notebook and obtain the same cleaned datasets and results.
+
+Our repository is structured to support full reproducibility — anyone can re-run the notebook and obtain the same cleaned datasets and results. All scripts and data files are properly labeled, versioned, and tagged to ensure transparency.
 
 ---
+
+
 
