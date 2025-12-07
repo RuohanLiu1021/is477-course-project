@@ -65,7 +65,8 @@ Our project follows a standard reproducible research layout:
     │   ├── clean_noaa.ipynb            # NOAA data cleaning workflow （with data quality analysis）
     │   ├── clean_eia.ipynb             # EIA data cleaning workflow （with data quality analysis）
     │   ├── integrate_noaa_eia.ipynb    # dataset integration
-    │   └── analysis_noaa_eia.ipynb     # Climate–electricity analysis & figures
+    │   ├── analysis_noaa_eia.ipynb     # Climate–electricity analysis & figures
+    │   └── openrefine_history.json     # Openrefine Process History
     │
     │── results/
     │   ├── corr_heatmap.png                # Correlation matrix visualization
