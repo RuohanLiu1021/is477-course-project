@@ -59,7 +59,7 @@ Our project follows a standard reproducible research layout:
     │   ├── acquire_eia.py      # EIA retail electricity sales acquisition
     │   ├── clean_noaa.py       # Cleaning and reshaping NOAA datasets
     │   ├── clean_eia.py        # Cleaning and formatting EIA data
-    │   └── integrate_noaa_eia.py  # Integration across datasets
+    │   ├── integrate_noaa_eia.py  # Integration across datasets
     │   └── openrefine_history.json # OpenRefine operation history 
     │
     │── results/
