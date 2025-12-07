@@ -52,8 +52,7 @@ Our project follows a standard reproducible research layout:
     is477-final-project/
     │── data/
     │   ├── raw/                # Programmatically acquired raw datasets (NOAA, EIA)
-    │   ├── clean/              # Cleaned datasets derived from raw data
-    │   └── processed/          # Integrated datasets used for analysis
+    │   └── clean/          # Cleaned datasets derived from raw data and Integrated datasets used for analysis
     │
     │── scripts/
     │   ├── acquire_noaa.py     # NOAA Climate Division data acquisition
@@ -63,8 +62,7 @@ Our project follows a standard reproducible research layout:
     │   └── integrate_noaa_eia.py  # Integration across datasets
     │
     │── results/
-    │   ├── figures/            # Generated visualizations
-    │   └── tables/             # Statistical summary tables
+    │   └── figures/             # Generated visualizations
     │
     │── checksums.txt           # SHA-256 checksums for data/raw files
     │── requirements.txt        # Python dependencies
