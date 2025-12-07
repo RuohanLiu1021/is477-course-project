@@ -1,9 +1,0 @@
-Assuming unrestricted shared filesystem usage.
-host: ahahahahahadeMacBook-Pro.local
-Building DAG of jobs...
-MissingInputException in rule all in file "/Users/ahahahahaha/Desktop/is477-final-project/Snakefile", line 1:
-Missing input files for rule all:
-    affected files:
-        data/raw/noaa_tavg.txt
-        data/raw/noaa_hdd.txt
-        data/raw/noaa_cdd.txt
