@@ -73,9 +73,11 @@ Our project follows a standard reproducible research layout:
     │
     │── checksums.txt                   # SHA-256 checksums for data/raw files
     │── requirements.txt                # Python dependencies
+    │── pip-freeze.txt                  # full dependency list
     │── run_all.sh                      # One-click reproducibility script (Snakemake wrapper)
     │── Snakefile                       # Full workflow automation
     │── README.md                       # Project documentation
+    
 
 This structure ensures clarity, reproducibility, and modularity throughout the workflow.
 
