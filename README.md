@@ -77,5 +77,28 @@ This structure ensures clarity, reproducibility, and modularity throughout the w
 
 
 ## References
-**TODO:** : Formatted citations for any papers, datasets, or software used in your project.
+
+National Centers for Environmental Information. (2023). *Climate Divisional Database (nClimDiv).*  
+https://www.ncei.noaa.gov/pub/data/cirs/climdiv/
+
+U.S. Energy Information Administration. (2023). *Electricity Data Browser – Retail Sales (API v2).*  
+https://www.eia.gov/electricity/data/browser/
+
+Python Software Foundation. (2023). *Python: Version 3.x.* https://www.python.org/
+
+The pandas development team. (2023). *pandas: Python Data Analysis Library.* https://pandas.pydata.org/
+
+Harris, C. et al. (2020). *Array programming with NumPy.* Nature. https://numpy.org/
+
+Hunter, J. D. (2007). *Matplotlib: A 2D Graphics Environment.* https://matplotlib.org/
+
+Waskom, M. (2021). *Seaborn: Statistical data visualization.* https://seaborn.pydata.org/
+
+Reitz, K. (2023). *Requests: HTTP for Humans.* https://requests.readthedocs.io/
+
+Köster, J., & Rahmann, S. (2012). *Snakemake—a scalable workflow engine.*  
+https://snakemake.readthedocs.io/
+
+DuckDB Authors. (2023). *DuckDB: An Embeddable Analytical Database.* https://duckdb.org/
+
 
