@@ -2,12 +2,23 @@
 
 Course project for IS477 · Fall 2025  
 
+
+## Contributors
+- Ruohan Liu (ruohanl3)
+- Yu Wan (wan27)
+  
 ## Contribution
 **Ruohan Liu (ruohanl3） – Analyst**  
-Contributed primarily to the data processing workflow in Python. Supported the acquisition, cleaning, and integration of NOAA and EIA datasets, and helped ensure that the scripts and workflow executed consistently. Assisted with early exploratory analysis and overall project organization.
+- Contributed primarily to the data processing workflow in Python. 
+- Supported the acquisition, cleaning, and integration of NOAA and EIA datasets.
+- Helped ensure that the scripts and workflow executed consistently. 
+- Assisted with early exploratory analysis and overall project organization.
 
 **Yu Wan (wan27) – Analyst**  
-Contributed to data profiling and cleaning using OpenRefine and assisted with preparing cleaned outputs for analysis. Drafted and organized the written project report (README), documented workflow steps, and prepared the Box archive to support reproducibility and grading.
+- Contributed to data profiling and cleaning using OpenRefine and assisted with preparing cleaned outputs for analysis. 
+- Drafted and organized the written project report (README).
+- Documented workflow steps
+- Prepared the Box archive to support reproducibility and grading.
 
 
 ---
