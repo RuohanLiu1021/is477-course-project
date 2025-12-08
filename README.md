@@ -555,6 +555,14 @@ To reproduce our analysis **starting from the Box data** instead of re-downloadi
    data/clean/eia_retail_sales_clean.csv
    data/clean/noaa_eia_integrated.csv```
 
+## FAIR Summary
+
+Our project follows core FAIR principles by providing clear metadata, transparent workflow documentation, and reproducible execution pathways. All cleaned datasets include human-readable, self-describing variable names, and the accompanying notebooks serve as a lightweight data dictionary documenting variable definitions, data provenance, and transformation steps. The repository structure (separating raw, clean, and integrated data) and the inclusion of OpenRefine operation history further support data traceability.
+
+Reproducibility is ensured through a Snakemake workflow and the accompanying `run_all.sh` script, which allow the entire pipeline—from acquisition to cleaning, integration, and analysis—to be re-executed deterministically. Software dependencies are fully captured in `requirements.txt` and `pip-freeze.txt`.
+
+Although we did not publish the project in an external archival repository such as Zenodo, the repository includes sufficient metadata, documentation, and workflow automation to enable future FAIR-aligned publication if desired.
+
 ## Licenses and Metadata
 
 - **Data licenses.**  
