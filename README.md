@@ -367,46 +367,6 @@ Each of these directions would build on the reproducible foundation we designed 
 This section provides all steps needed for another user to reproduce our entire project workflow, from acquiring data to generating final results.
 
 ### Storage and organization
-
-#### Project Directory Structure
-
-Our project follows a standard reproducible research layout:
-
-is477-course-project/
-│── data/
-│   ├── raw/                        # Programmatically acquired raw datasets (NOAA, EIA)
-│   └── clean/                      # Cleaned datasets + integrated dataset
-│
-│── scripts/
-│   ├── acquire_noaa.py             # NOAA climate data acquisition
-│   ├── acquire_eia.py              # EIA retail electricity sales acquisition
-│   ├── clean_noaa.py               # Cleaning and reshaping NOAA datasets
-│   ├── clean_eia.py                # Cleaning and formatting EIA data
-│   ├── integrate_noaa_eia.py       # Integration across datasets
-│   └── analysis_noaa_eia.py        # Automated analysis and figure generation
-│
-│── notebook/
-│   ├── clean_noaa.ipynb            # NOAA data cleaning workflow + quality assessment
-│   ├── clean_eia.ipynb             # EIA data cleaning workflow + quality assessment
-│   ├── integrate_noaa_eia.ipynb    # Dataset integration
-│   ├── analysis_noaa_eia.ipynb     # Climate–electricity analysis & figures
-│   └── openrefine_history.json     # OpenRefine operation history
-│
-│── results/
-│   ├── corr_heatmap.png                # Correlation matrix visualization
-│   └── seasonal_temp_cdd_hdd_sales.png # Seasonal climate vs. sales trends
-│
-│── checksums.txt                   # SHA-256 checksums for data/raw files
-│── requirements.txt                # Core Python dependencies
-│── pip-freeze.txt                  # Full dependency list
-│── run_all.sh                      # One-click reproducibility script (Snakemake wrapper)
-│── Snakefile                       # Full workflow automation
-│── ProjectPlan.md                  # Milestone 2 project plan
-│── StatusReport.md                 # Milestone 3 status report
-│── README.md                       # Final project report (this file)
-
-
-### Storage and organization
 #### Project Directory Structure
 Our project follows a standard reproducible research layout:
 
@@ -476,6 +436,7 @@ Downloaded files will be stored in:
 data/raw/
 
 If automatic download is not possible, the README provides links and SHA-256 checksums so files can be manually placed into the same directory.
+
 
 ### 3. Data Cleaning
 All data cleaning steps can be reproduced by running:
@@ -555,6 +516,15 @@ This will regenerate:
 - All figures
 
 ---
+
+## Box data sharing 
+We also upload our cleaned / integrated datasets and key outputs to Box so TAs can access them directly.
+Shareable Box folder:
+https://uofi.box.com/s/hm5d4i6fq5g43vmyz6ejv48ho0czny7h
+The Box folder contains: 
+-noaa_climate_clean.csv
+-eia_retail_sales_clean.csv
+-noaa_eia_integrated.csv
 
 ## References
 
