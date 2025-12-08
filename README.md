@@ -323,7 +323,8 @@ These patterns highlight that **electricity demand is shaped by both climate and
 
 ## Future Work (500–1000 words)
 
-This project establishes a clean, integrated, and reproducible dataset linking climate indicators with state-level electricity demand. Several promising extensions could deepen both the methodological and substantive insights:
+This project establishes a clean, integrated, and reproducible dataset linking climate indicators with state-level electricity demand. Before extending the analysis, we also reflect on a few key lessons learned from the project. First, even “simple” public datasets like NOAA and EIA require non-trivial cleaning and careful handling of missing values and codes such as –99.9 and –9999. Second, end-to-end reproducibility takes deliberate planning: keeping raw and clean data separate, recording OpenRefine histories, and wiring everything into Snakemake all required extra effort but made later changes much easier. Finally, we realized that climate alone cannot fully explain electricity demand; integrating demographic, economic, and policy variables is essential for more robust conclusions.
+Several promising extensions could deepen both the methodological and substantive insights:
 
 1. **Incorporate demographic and economic covariates.**  
    Our current analysis uses climate variables alone. Adding population, GDP, industrial composition, or urbanization metrics would allow us to disentangle how much variation in electricity demand is due to climate vs. economic scale. This would support elasticities such as “kWh per capita per °F” or “kWh per unit of state GDP.”
@@ -516,15 +517,44 @@ This will regenerate:
 - All figures
 
 ---
+## Box Data Archive (Required Output Data)
 
-## Box data sharing 
-We also upload our cleaned / integrated datasets and key outputs to Box so TAs can access them directly.
-Shareable Box folder:
+Per the IS477 project requirements, we upload our **output data** to Box so that the TAs can access them directly without re-running the full workflow from raw sources.
+
+**Shareable Box folder**  
 https://uofi.box.com/s/hm5d4i6fq5g43vmyz6ejv48ho0czny7h
-The Box folder contains: 
--noaa_climate_clean.csv
--eia_retail_sales_clean.csv
--noaa_eia_integrated.csv
+
+This Box folder contains only the cleaned and integrated data files:
+
+- `noaa_climate_clean.csv`
+- `eia_retail_sales_clean.csv`
+- `noaa_eia_integrated.csv`
+
+To reproduce our analysis **starting from the Box data** instead of re-downloading and re-cleaning:
+
+1. Download all three CSV files from the Box folder.  
+2. Place them into the project directory under:
+
+   ```text
+   data/clean/noaa_climate_clean.csv
+   data/clean/eia_retail_sales_clean.csv
+   data/clean/noaa_eia_integrated.csv```
+
+## Licenses and Metadata
+
+- **Data licenses.**  
+  The NOAA nClimDiv and EIA retail electricity datasets are U.S. federal government data intended for public use. We use them solely for non-commercial, educational purposes and cite NOAA and EIA as the original data providers.
+
+- **Code license.**  
+  All code and workflow files in this repository are provided for educational and reproducibility purposes as part of IS477. Unless otherwise noted, they may be reused for coursework or research with appropriate attribution to the authors.
+
+- **Metadata and data documentation.**  
+  Our cleaned and integrated CSV files use descriptive, self-documenting column names (`stateid`, `state_name`, `year`, `month`, `tavg`, `cdd`, `hdd`, `sales`, `revenue`).  
+  Additional variable descriptions and data profiling outputs are included in the cleaning and integration notebooks:
+  - `notebook/clean_noaa.ipynb`
+  - `notebook/clean_eia.ipynb`
+  - `notebook/integrate_noaa_eia.ipynb`
+  These notebooks serve as a lightweight data dictionary and provenance record for each field.
 
 ## References
 
