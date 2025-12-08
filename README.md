@@ -372,7 +372,6 @@ This section provides all steps needed for another user to reproduce our entire 
 
 Our project follows a standard reproducible research layout:
 
-```text
 is477-course-project/
 │── data/
 │   ├── raw/                        # Programmatically acquired raw datasets (NOAA, EIA)
@@ -391,7 +390,7 @@ is477-course-project/
 │   ├── clean_eia.ipynb             # EIA data cleaning workflow + quality assessment
 │   ├── integrate_noaa_eia.ipynb    # Dataset integration
 │   ├── analysis_noaa_eia.ipynb     # Climate–electricity analysis & figures
-│   └── openrefine_history.json     # OpenRefine operation history (if used)
+│   └── openrefine_history.json     # OpenRefine operation history
 │
 │── results/
 │   ├── corr_heatmap.png                # Correlation matrix visualization
@@ -559,27 +558,17 @@ This will regenerate:
 
 ## References
 
-National Centers for Environmental Information. (2023). *Climate Divisional Database (nClimDiv).*  
-https://www.ncei.noaa.gov/pub/data/cirs/climdiv/
+### Data Sources
+- National Centers for Environmental Information (2023). *nClimDiv Climate Divisional Database.*
+  https://www.ncei.noaa.gov/pub/data/cirs/climdiv/
+- U.S. Energy Information Administration (2023). *Electricity Data Browser – Retail Sales.*
+  https://www.eia.gov/electricity/data/browser/
+### Software & Libraries
+- Python Software Foundation (2023). Python 3.x  
+- NumPy, pandas, Matplotlib, Seaborn, Requests  
+- Snakemake workflow engine  
 
-U.S. Energy Information Administration. (2023). *Electricity Data Browser – Retail Sales (API v2).*  
-https://www.eia.gov/electricity/data/browser/
-
-Python Software Foundation. (2023). *Python: Version 3.x.* https://www.python.org/
-
-The pandas development team. (2023). *pandas: Python Data Analysis Library.* https://pandas.pydata.org/
-
-Harris, C. et al. (2020). *Array programming with NumPy.* Nature. https://numpy.org/
-
-Hunter, J. D. (2007). *Matplotlib: A 2D Graphics Environment.* https://matplotlib.org/
-
-Waskom, M. (2021). *Seaborn: Statistical data visualization.* https://seaborn.pydata.org/
-
-Reitz, K. (2023). *Requests: HTTP for Humans.* https://requests.readthedocs.io/
-
-Köster, J., & Rahmann, S. (2012). *Snakemake—a scalable workflow engine.*  
-https://snakemake.readthedocs.io/
-
-DuckDB Authors. (2023). *DuckDB: An Embeddable Analytical Database.* https://duckdb.org/
+### Course Documentation
+- IS477 Course Staff (2025). *Course Project Overview & Instructions.* (Internal document)
 
 
