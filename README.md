@@ -32,7 +32,7 @@ The correlation analysis shows that climate variables are clearly related to ele
 
 From a curation standpoint, the project demonstrates end-to-end reproducibility. All acquisition, cleaning, and integration steps are automated through Python scripts and orchestrated using a **Snakemake** workflow and `run_all.sh`. We include OpenRefine history, checksums, and environment metadata so that others can inspect our decisions, verify data integrity, and re-run the entire workflow from raw downloads to final figures.
 
-Overall, the project shows that climate is an important but not exclusive determinant of electricity demand: climate variables explain part of the variation, but population size, economic activity, infrastructure, and energy prices also matter. The workflow and integrated dataset provide a foundation for future modeling work, such as forecasting or regional policy analysis, while satisfying the IS477 requirements for transparency and reproducibility.:contentReference[oaicite:0]{index=0}
+Overall, the project shows that climate is an important but not exclusive determinant of electricity demand: climate variables explain part of the variation, but population size, economic activity, infrastructure, and energy prices also matter. The workflow and integrated dataset provide a foundation for future modeling work, such as forecasting or regional policy analysis, while satisfying the IS477 requirements for transparency and reproducibility.
 
 ---
 
